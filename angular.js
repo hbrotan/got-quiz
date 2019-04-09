@@ -54,7 +54,7 @@
       
         function post(data) {
             return $q(function (resolve, reject) {
-                $http.post('https://easterquiz-api.azurewebsites.net/api/answers', data)
+                $http.post('https://got-quiz-api.azurewebsites.net/api/answers', data)
                     .then(saveComplete)
                     .catch(saveFailed);
 
