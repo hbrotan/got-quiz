@@ -90,4 +90,5 @@
 		.circular--square {
 			border-radius: 50%;
 			border: 1px solid silver;
+			max-height: 200px;
 		}
