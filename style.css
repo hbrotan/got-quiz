@@ -82,3 +82,11 @@
             font-size:16px;
         }
         hr {margin: 0;}
+		
+		.btn-group{
+			margin-bottom: 20px;
+		}
+		
+		.circular--square {
+			border-radius: 50%;
+		}
