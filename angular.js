@@ -26,8 +26,8 @@
          });            
 
         function submit(){
-            if(!vm.answer.name || !vm.answer.email || !vm.answer.company || vm.answer.email.indexOf('@') === -1){
-                vm.error = "Du må fylle ut navn, gyldig epost og firma";
+            if(!vm.answer.name || !vm.answer.email || vm.answer.email.indexOf('@') === -1){
+                vm.error = "Du må fylle ut navn og gyldig epost";
                 return;
             }                               
             
