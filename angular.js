@@ -17,12 +17,12 @@
         vm.isSubmitting = false;       
         vm.submit = submit;             
               
-        var answerFromCookie = $cookies.get('nrk-got-quiz');
+        var answerFromCookie = $cookies.get('got-quiz');
         if(answerFromCookie)
             vm.answer = JSON.parse(answerFromCookie); 
 
         $scope.$watchCollection('vm.answer', function() { 
-           $cookies.put('nrk-got-quiz', JSON.stringify(vm.answer), { expires: new Date(2019, 4, 15) });
+           $cookies.put('got-quiz', JSON.stringify(vm.answer), { expires: new Date(2019, 4, 15) });
          });            
 
         function submit(){
