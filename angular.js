@@ -38,7 +38,8 @@
                 .then(function(){
                     vm.hasAnswered = true;
                 })
-                .catch(function(){
+                .catch(function(ex){
+					console.log(ex);
                     vm.error = "Det har skjedd en feil ved levering av svarene. Vennligst prøv på nytt.";
                 })
                 .finally(function(){
