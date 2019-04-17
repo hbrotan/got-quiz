@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('app', [])
         .controller('controller', controller)
         .factory('dataservice', dataservice);
 
-    controller.$inject = ['$scope', 'dataservice'];
+    controller.$inject = ['dataservice'];
     dataservice.$inject = ['$q', '$http'];
 
     function controller($scope, dataservice) {
