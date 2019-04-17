@@ -11,27 +11,25 @@
 </head>
 <body>
     <div class="container">
-        <div class="row" style="padding: 40px;">
+        <div class="row" style="padding-top: 40px;">
             <div class="col-lg-8 col-lg-offset-2 text-center">
 				<img src="pics/logo.jpg" alt="Game of Thrones quiz" style="max-width: 100%" />            
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12 well easterbg text-center">
+        <div class="row well easterbg">
+            <div class="col-lg-6 col-lg-offset-3 text-left">
                 <h2>Hvem overlever sesong 8?</h2>
-                Gjett og marker status for hver karakter ved enden av sesong 8.<br><br>
-				<strong>Poengberegning:</strong><br>
-				Overlever = 2 poeng<br>
-				Dør = 2 poeng<br>
-				Sittende på Jerntronen = 6 poeng<br>
-				Blir til en White Walker eller Wight = 2 poeng<br><br>          
-            </div>           
-            
+				<div style="padding-bottom:3px"><strong>Poengberegning:</strong></div>
+				<div style="padding-bottom:3px"><span class="label label-success answer">L</span> - Overlever = 2 poeng</div>
+				<div style="padding-bottom:3px"><span class="label label-danger answer">D</span> - Dør = 2 poeng</div>
+				<div style="padding-bottom:3px"><span class="label label-warning answer">T</span> - Sittende på Jerntronen = 6 poeng</div>
+				<div><span class="label label-info">W</span>	 - Blir til en White Walker eller Wight = 2 poeng</div>       
+            </div>            
         </div>    
         <br class="web-only">
         <div class="row">
-            <div class="col-lg-12 table-header text-center">                				
-                <table class="table">
+            <div class="col-lg-12 table-header text-center">																						
+                <table class="table" style="font-size:smaller">
 					<thead>
 						<tr>
 							<th>Navn</th>
@@ -70,36 +68,186 @@
 					<tbody>
 						<tr ng-repeat="answer in ::vm.answers">
 							<td>{{::answer.Name}}</td>
-							<td>{{::answer.Q1}}</td>
-							<td>{{::answer.Q2}}</td>
-							<td>{{::answer.Q3}}</td>
-							<td>{{::answer.Q4}}</td>
-							<td>{{::answer.Q5}}</td>
-							<td>{{::answer.Q6}}</td>
-							<td>{{::answer.Q7}}</td>
-							<td>{{::answer.Q8}}</td>
-							<td>{{::answer.Q9}}</td>
-							<td>{{::answer.Q10}}</td>
-							<td>{{::answer.Q11}}</td>
-							<td>{{::answer.Q12}}</td>
-							<td>{{::answer.Q13}}</td>
-							<td>{{::answer.Q14}}</td>
-							<td>{{::answer.Q15}}</td>
-							<td>{{::answer.Q16}}</td>
-							<td>{{::answer.Q17}}</td>
-							<td>{{::answer.Q18}}</td>
-							<td>{{::answer.Q19}}</td>
-							<td>{{::answer.Q20}}</td>
-							<td>{{::answer.Q21}}</td>
-							<td>{{::answer.Q22}}</td>
-							<td>{{::answer.Q23}}</td>
-							<td>{{::answer.Q24}}</td>
-							<td>{{::answer.Q25}}</td>
-							<td>{{::answer.Q26}}</td>
-							<td>{{::answer.Q27}}</td>
-							<td>{{::answer.Q28}}</td>
-							<td>{{::answer.Q29}}</td>
-							<td>{{::answer.Q30}}</td>							
+							<td>
+								<span ng-if="answer.Q1 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q1 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q1 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q1 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q2 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q2 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q2 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q2 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q3 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q3 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q3 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q3 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q4 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q4 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q4 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q4 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q5 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q5 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q5 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q5 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q6 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q6 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q6 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q6 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q7 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q7 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q7 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q7 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q8 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q8 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q8 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q8 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q9 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q9 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q9 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q9 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q10 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q10 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q10 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q10 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q11 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q11 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q11 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q11 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q12 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q12 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q12 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q12 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q13 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q13 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q13 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q13 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q14 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q14 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q14 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q14 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q15 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q15 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q15 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q15 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q16 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q16 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q16 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q16 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q17 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q17 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q17 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q17 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q18 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q18 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q18 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q18 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q19 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q19 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q19 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q19 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q20 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q20 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q20 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q20 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q21 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q21 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q21 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q21 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q22 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q22 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q22 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q22 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q23 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q23 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q23 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q23 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q24 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q24 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q24 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q24 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q25 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q25 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q25 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q25 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q26 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q26 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q26 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q26 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q27 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q27 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q27 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q27 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q28 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q28 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q28 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q28 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q29 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q29 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q29 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q29 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q30 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q30 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q30 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q30 === 'W'" class="label label-info">W</span>								
+							</td>											
 						</tr>
 					</tbody>
 				</table>
