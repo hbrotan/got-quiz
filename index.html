@@ -29,8 +29,6 @@
 				Dør = 2 poeng<br>
 				Sittende på Jerntronen = 6 poeng<br>
 				Blir til en White Walker eller Wight = 2 poeng<br><br>
-				<br>
-                <strong>Svarfrist er 14.april (kl. 23:59)</strong>
                 <br class="web-only">
                 <br class="web-only">               
             </div>           
@@ -39,11 +37,78 @@
         <br class="web-only">
         <div class="row">
             <div class="col-lg-12 table-header text-center">                				
-                <form class="form-horizontal">
-                    <div class="form-group well">      
-						Det er nå stengt for innsending. 				
-                    </div>												
-                </form>
+                <table class="table">
+					<thead>
+						<tr>
+							<th>Navn</th>
+							<th>Jon Snow</th>
+							<th>Sansa Stark</th>
+							<th>Arya Stark</th>
+							<th>Bran Stark</th>
+							<th>Cersei Lannister</th>
+							<th>Jamie Lannister</th>
+							<th>Tyrion Lannister</th>
+							<th>Daenerys Targaryen</th>
+							<th>Yara Greyjoy</th>
+							<th>Theon Greyjoy</th>
+							<th>Euron Greyjoy</th>
+							<th>The Hound</th>
+							<th>The Mountain</th>
+							<th>Melisandre</th>
+							<th>Jorah Mormont</th>
+							<th>Samwell Tarly</th>
+							<th>Gilly</th>
+							<th>Sam (barn)</th>
+							<th>Lord Varys</th>
+							<th>Brienne of Tarth</th>
+							<th>Bronn</th>
+							<th>Davos Seaworth</th>
+							<th>Podrick Payne</th>
+							<th>Tormund</th>
+							<th>Grey Worm</th>
+							<th>Missandei</th>
+							<th>Daario Naharis</th>
+							<th>Beric Dondarrion</th>
+							<th>Gendry</th>
+							<th>Night King</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="answer in ::vm.answers">
+							<td>{{::answer.Name}}</td>
+							<td>{{::answer.Q1}}</td>
+							<td>{{::answer.Q2}}</td>
+							<td>{{::answer.Q3}}</td>
+							<td>{{::answer.Q4}}</td>
+							<td>{{::answer.Q5}}</td>
+							<td>{{::answer.Q6}}</td>
+							<td>{{::answer.Q7}}</td>
+							<td>{{::answer.Q8}}</td>
+							<td>{{::answer.Q9}}</td>
+							<td>{{::answer.Q10}}</td>
+							<td>{{::answer.Q11}}</td>
+							<td>{{::answer.Q12}}</td>
+							<td>{{::answer.Q13}}</td>
+							<td>{{::answer.Q14}}</td>
+							<td>{{::answer.Q15}}</td>
+							<td>{{::answer.Q16}}</td>
+							<td>{{::answer.Q17}}</td>
+							<td>{{::answer.Q18}}</td>
+							<td>{{::answer.Q19}}</td>
+							<td>{{::answer.Q20}}</td>
+							<td>{{::answer.Q21}}</td>
+							<td>{{::answer.Q22}}</td>
+							<td>{{::answer.Q23}}</td>
+							<td>{{::answer.Q24}}</td>
+							<td>{{::answer.Q25}}</td>
+							<td>{{::answer.Q26}}</td>
+							<td>{{::answer.Q27}}</td>
+							<td>{{::answer.Q28}}</td>
+							<td>{{::answer.Q29}}</td>
+							<td>{{::answer.Q30}}</td>							
+						</tr>
+					</tbody>
+				</table>
             </div>
         </div> 		
     </div>
@@ -52,6 +117,5 @@
 </body>
 </html>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.11.1/lodash.min.js"></script>
 <script type="text/javascript" src="angular.js"></script>
