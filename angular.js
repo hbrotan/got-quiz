@@ -9,7 +9,7 @@
     controller.$inject = ['dataservice'];
     dataservice.$inject = ['$q', '$http'];
 
-    function controller($scope, dataservice) {
+    function controller(dataservice) {
         var vm = this;
         vm.answer = {};
         vm.error = null;     
