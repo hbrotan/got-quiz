@@ -12,13 +12,19 @@
     function controller(dataservice) {
         var vm = this;
         vm.answer = {};
-        vm.error = null;     
+        vm.displayPoints = true;
+		vm.error = null;
+	    vm.toggleDisplay = toggleDisplay;
 
 		dataservice.get()
             .then(function(result){
                 vm.answers = result;
             });		        
-    }
+			
+		function toggleDisplay(){
+			vm.displayPoints = !vm.displayPoints;
+		}
+    }	 
 
     function dataservice($q, $http) {
         return {
