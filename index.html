@@ -42,21 +42,21 @@
 				<thead>
 					<tr>
 						<th>Navn</th>				
-						<th>Antall overlevende</th>
-						<th>Antall døde</th>
-						<th>Antall på tronen</th>
-						<th>Antall White Walkers</th>
-						<th>Poeng etter episode 2</th>
+						<th class="text-right">Antall overlevende</th>
+						<th class="text-right">Antall døde</th>
+						<th class="text-right">Antall på tronen</th>
+						<th class="text-right">Antall White Walkers</th>
+						<th class="text-right">Poeng etter episode 2</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="answer in ::vm.answers">
 						<td class="text-left">{{::answer.Name}}</td>
-						<td class="text-left">{{::answer.CountSurvive}}</td>
-						<td class="text-left">{{::answer.CountDead}}</td>
-						<td class="text-left">{{::answer.CountThrone}}</td>
-						<td class="text-left">{{::answer.CountWhiteWalker}}</td>
-						<td class="text-left"><strong>{{::answer.Points}}</strong></td>
+						<td class="text-right">{{::answer.CountSurvive}}</td>
+						<td class="text-right">{{::answer.CountDead}}</td>
+						<td class="text-right">{{::answer.CountThrone}}</td>
+						<td class="text-right">{{::answer.CountWhiteWalker}}</td>
+						<td class="text-right"><strong>{{::answer.Points}}</strong></td>
 					</tr>
 				</tbody>
 			</table>
