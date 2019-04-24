@@ -102,7 +102,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="answer in ::vm.answers">
+					<tr ng-repeat="answer in ::vm.answers | orderBy : 'Name'">
 						<td class="text-left">{{::answer.Name}}</td>
 						<td>
 							<span ng-if="answer.Q1 === 'L'" class="label label-success">L</span>
