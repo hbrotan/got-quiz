@@ -70,37 +70,8 @@
 						<th class="text-center">Antall <span class="label label-info">W</span></th>
 						
 						<th ng-repeat="c in ::vm.characters">
-							<span ng-class="c.Status" class="label label-success">{{c.Name}}</span>
+							<span class="label" ng-class="{'label-success : c.Status == 'L', 'label-danger': c.Status == 'D', 'label-warning': c.Status == 'T', 'label-info': c.Status == 'W'}" >{{c.Name}}</span>
 						</th>
-						<!-- <th>Sansa Stark</th> -->
-						<!-- <th>Arya Stark</th> -->
-						<!-- <th>Bran Stark</th> -->
-						<!-- <th>Cersei Lannister</th> -->
-						<!-- <th>Jamie Lannister</th> -->
-						<!-- <th>Tyrion Lannister</th> -->
-						<!-- <th>Daenerys Targaryen</th> -->
-						<!-- <th>Yara Greyjoy</th> -->
-						<!-- <th>Theon Greyjoy</th> -->
-						<!-- <th>Euron Greyjoy</th> -->
-						<!-- <th>The Hound</th> -->
-						<!-- <th>The Mountain</th> -->
-						<!-- <th>Melisandre</th> -->
-						<!-- <th>Jorah Mormont</th> -->
-						<!-- <th>Samwell Tarly</th> -->
-						<!-- <th>Gilly</th> -->
-						<!-- <th>Sam (barn)</th> -->
-						<!-- <th>Lord Varys</th> -->
-						<!-- <th>Brienne</th> -->
-						<!-- <th>Bronn</th> -->
-						<!-- <th>Davos Seaworth</th> -->
-						<!-- <th>Podrick Payne</th> -->
-						<!-- <th>Tormund</th> -->
-						<!-- <th>Grey Worm</th> -->
-						<!-- <th>Missandei</th> -->
-						<!-- <th>Daario Naharis</th> -->
-						<!-- <th>Beric Dondarrion</th> -->
-						<!-- <th>Gendry</th> -->
-						<!-- <th>Night King</th> -->
 					</tr>
 				</thead>
 				<tbody>				
