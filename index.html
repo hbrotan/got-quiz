@@ -42,14 +42,14 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Navn</th>				
 						<th class="text-right">Poeng</th>
+						<th class="text-left">Navn</th>				
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="answer in ::vm.answers">
-						<td class="text-left">{{::answer.Name}}</td>
+					<tr ng-repeat="answer in ::vm.answers">						
 						<td class="text-right"><strong>{{::answer.Points}}</strong></td>
+						<td class="text-left">{{::answer.Name}}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -62,10 +62,10 @@
 				<thead>
 					<tr>
 						<th>Navn</th>
-						<th class="text-right">Antall <span class="label label-success">L</span></th>
-						<th class="text-right">Antall <span class="label label-danger">D</span></th>
-						<th class="text-right">Antall <span class="label label-warning">T</span></th>
-						<th class="text-right">Antall <span class="label label-info">W</span></th>						
+						<th class="text-center">Antall <span class="label label-success">L</span></th>
+						<th class="text-center">Antall <span class="label label-danger">D</span></th>
+						<th class="text-center">Antall <span class="label label-warning">T</span></th>
+						<th class="text-center">Antall <span class="label label-info">W</span></th>						
 						<th>Jon Snow</th>
 						<th>Sansa Stark</th>
 						<th>Arya Stark</th>
@@ -101,10 +101,10 @@
 				<tbody>				
 					<tr ng-repeat="answer in ::vm.answers | orderBy : 'Name'">
 						<td class="text-left">{{::answer.Name}}</td>
-						<td class="text-right">{{::answer.CountSurvive}}</td>
-						<td class="text-right">{{::answer.CountDead}}</td>
-						<td class="text-right">{{::answer.CountThrone}}</td>
-						<td class="text-right">{{::answer.CountWhiteWalker}}</td>
+						<td class="text-center">{{::answer.CountSurvive}}</td>
+						<td class="text-center">{{::answer.CountDead}}</td>
+						<td class="text-center">{{::answer.CountThrone}}</td>
+						<td class="text-center">{{::answer.CountWhiteWalker}}</td>
 						<td>
 							<span ng-if="answer.Q1 === 'L'" class="label label-success">L</span>
 							<span ng-if="answer.Q1 === 'D'" class="label label-danger">D</span>
