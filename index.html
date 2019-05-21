@@ -70,7 +70,7 @@
 						<th class="text-center">Antall <span class="label label-warning">T</span></th>
 						<th class="text-center">Antall <span class="label label-info">W</span></th>
 						
-						<th ng-repeat="c in ::vm.characters">
+						<th ng-repeat="c in ::vm.characters" ng-if="c.Id !== 'Q27'">
 							<span class="label" ng-class="{'label-success' : c.Status == 'L', 'label-danger': c.Status == 'D', 'label-warning': c.Status == 'T', 'label-info': c.Status == 'W'}" >{{c.Name}}</span>
 						</th>
 					</tr>
@@ -237,12 +237,6 @@
 							<span ng-if="answer.Q26 === 'D'" class="label label-danger">D</span>
 							<span ng-if="answer.Q26 === 'T'" class="label label-warning">T</span>
 							<span ng-if="answer.Q26 === 'W'" class="label label-info">W</span>								
-						</td>
-						<td>
-							<span ng-if="answer.Q27 === 'L'" class="label label-success">L</span>
-							<span ng-if="answer.Q27 === 'D'" class="label label-danger">D</span>
-							<span ng-if="answer.Q27 === 'T'" class="label label-warning">T</span>
-							<span ng-if="answer.Q27 === 'W'" class="label label-info">W</span>								
 						</td>
 						<td>
 							<span ng-if="answer.Q28 === 'L'" class="label label-success">L</span>
